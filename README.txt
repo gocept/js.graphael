@@ -1,5 +1,5 @@
 js.graphael
-************
+***********
 
 Introduction
 ============
