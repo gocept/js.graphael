@@ -6,6 +6,8 @@ CHANGES
 
 - Nothing changed yet.
 
+- Migration to Github.
+
 
 0.5.1 (2013-02-27)
 ==================
