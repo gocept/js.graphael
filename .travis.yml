@@ -1,0 +1,14 @@
+language: python
+python:
+- 2.7
+install:
+- pip install -U setuptools zc.buildout setuptools-scm
+- buildout -n
+script:
+- bin/test --cache-clear --cov-report term-missing --cov src
+after_success: 
+cache:
+  pip: true
+notifications:
+  webhooks:
+    secure: PASggQ8lWsxccGuWWVu2+zdq8OD3lHichhMreFqTCTKk8Y0LVjdGWIWmajD+AoOl2JC2Uo8FSvW/5TVR8ySa+yFqSJz0KM4nueooImHxiVAL+ugtCM8Ke4vt1iJeFpaKJ07GwDmOpodf1eDkc7v8H8ySQD3vJVrW6pd5FTZPMIjPAl3uU/dbQGy7ECp5fiheLQWczkQcD3YUi6LgGcvZO1/FYwi0yM5DW/321l8czXq5BsaclexuJfyeT9ju5kEbz5u8v7btBv5+BR/9MBqMOU6ehX2z+vyqh+9FL0Ed7ShYgUeP7uEcMSMVXaRWYROo/wYQsf8guGbF/5sk7BWG31YaSxifB6Vfja5r+1tcJ6dq4tmlSt16bzwyU+cPXDYEIWH4ZHboMeWpIWkc6zrKa3RJMBR1kSRKww7i50dVDRxVxDrAqqO1023av9rn33vodECmgNyiFXDwg16vdQ7351ymaltAUUOslSkFwnMmCySuz1bJp8RxXuCpw90joDBzdeIAJ+tuAuYzd8EdY/mbnnu0XkDnnhqPiSnDIF+RhFGqBogi2SY3peC7VSostKIzx4GC9O5Uu+HcivLp1VXgZos4ebmlylwUsK7cprp0ve9fEi7gdhrnwfsHeJnoexgkZH8TlnbofgcjLmrB+3hxRWg8NrrOa6Ws4vqXoIURZ90=
